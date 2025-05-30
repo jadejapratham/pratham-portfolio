@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pratham Jadeja - AI Developer and Python Programmer">
+  <title>Pratham Jadeja | Portfolio</title>
+  <link rel="icon" href="https://fav.farm/🤖" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    :root {
+      --bg-light: #f8f9fa;
+      --bg-dark: #1e1e2f;
+      --text-light: #333;
+      --text-dark: #f8f9fa;
+      --accent: #58a6ff;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0; padding: 0;
+      background: var(--bg-light);
+      color: var(--text-light);
+      transition: all 0.3s ease-in-out;
+    }
+    header, footer {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+      text-align: center;
+      padding: 2rem;
+    }
+    section { max-width: 900px; margin: auto; padding: 2rem; }
+    .project, .cert, form { background: white; padding: 1rem; border-radius: 10px; margin-bottom: 1rem; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    h1, h2, h3 { margin-bottom: 0.5rem; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .dark-mode {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+    }
+    .dark-mode .project, .dark-mode .cert, .dark-mode form {
+      background: #2a2a3b;
+      color: #f1f1f1;
+    }
+    .toggle-btn {
+      position: absolute; top: 1rem; right: 1rem; background: #444; color: white; padding: 0.5rem 1rem; border: none; border-radius: 5px; cursor: pointer;
+    }
+    .resume-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      background: #58a6ff;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <button class="toggle-btn" onclick="toggleTheme()">Toggle Theme</button>
+  <header data-aos="fade-down">
+    <h1>Pratham Jadeja</h1>
+    <p>AI Developer | Python Programmer | Streamlit Enthusiast</p>
+    <p>📍 Vadodara, Gujarat | <a href="mailto:jadejapratham08@gmail.com">jadejapratham08@gmail.com</a></p>
+    <p><a href="https://www.linkedin.com/in/jadeja-pratham-6b968a32b" target="_blank">LinkedIn</a> | <a href="https://github.com/jadejapratham" target="_blank">GitHub</a></p>
+    <a class="resume-btn" href="JADEJA_PRATHAM_RESUME.pdf" download>Download Resume</a>
+  </header>
+
+  <section>
+    <h2 data-aos="fade-right">✨ Profile Summary</h2>
+    <p data-aos="fade-up">Self-driven and technically focused B.Tech CSE student with hands-on practices in building AI-powered applications, predictive dashboards, and interactive web tools. Passionate about real-world problem solving using Python, machine learning, and APIs. Ability to deliver user-focused solutions through automation, intelligent systems, and data visualization.</p>
+
+    <h2 data-aos="fade-right">🔧 Skills</h2>
+    <ul data-aos="fade-up">
+      <li><strong>Languages:</strong> Python, JavaScript, HTML, CSS</li>
+      <li><strong>Frameworks & Libraries:</strong> Streamlit, Flask, Pandas, NumPy, TensorFlow, scikit-learn</li>
+      <li><strong>Tools & Platforms:</strong> Git, Figma, WordPress, Postman, API Integration</li>
+      <li><strong>Concepts:</strong> AI/ML Basics, Time Series Forecasting, NLP</li>
+    </ul>
+
+    <h2 data-aos="fade-right">📊 Projects</h2>
+    <div class="project" data-aos="fade-up">
+      <h3>Crypto Trend Analyzer & Price Predictor</h3>
+      <p>Real-time dashboard using LSTM and sentiment analysis to predict crypto price trends. Integrated NewsAPI and CoinGecko for live data. <a href="https://github.com/your-username/crypto-predictor" target="_blank">GitHub Repo</a></p>
+    </div>
+    <div class="project" data-aos="fade-up">
+      <h3>AI Image Generation with Stable Diffusion</h3>
+      <p>Offline image generator using ComfyUI + Stable Diffusion. Enabled customizable prompts and optimized rendering. <a href="https://github.com/your-username/image-generator" target="_blank">GitHub Repo</a></p>
+    </div>
+    <div class="project" data-aos="fade-up">
+      <h3>Personalized Health Tracking Website</h3>
+      <p>Responsive fitness & diet tracker using HTML, CSS, JS with goal monitoring features. <a href="https://github.com/your-username/health-tracker" target="_blank">GitHub Repo</a></p>
+    </div>
+
+    <h2 data-aos="fade-right">🎓 Education</h2>
+    <p data-aos="fade-up"><strong>ITM (SLS) Baroda University</strong> – B.Tech in Computer Science & Engineering (2021–2025)</p>
+    <p data-aos="fade-up"><strong>Shree Navdurga High School, Rajpipla</strong> – SSC (2019), HSC (2021)</p>
+
+    <h2 data-aos="fade-right">🏆 Certifications</h2>
+    <div class="cert" data-aos="fade-up">
+      <ul>
+        <li>Google Certificate in Generative AI</li>
+        <li>Big Data Analytics</li>
+        <li>AI/ML Basics</li>
+        <li>Blockchain Basics</li>
+        <li>Internship – AI: Transformative Learning</li>
+      </ul>
+    </div>
+
+    <h2 data-aos="fade-right">📧 Contact Me</h2>
+    <form action="https://formspree.io/f/xblyrlev" method="POST" data-aos="fade-up">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="4" required></textarea><br><br>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Pratham Jadeja | Open to AI, Data, and Web Dev Internships
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    function toggleTheme() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
+</body>
+</html>
