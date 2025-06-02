@@ -26,12 +26,6 @@ This is my personal developer portfolio website, built to showcase my **projects
 
 ---
 
-## 🚀 Live Demo
-
-**[View Live Portfolio](https://jadejapratham.github.io/pratham-portfolio/)**
-
----
-
 ## 🧾 License
 
 This project is free to use and modify. Attribution appreciated.
