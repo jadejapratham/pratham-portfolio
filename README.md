@@ -29,4 +29,4 @@ This is my personal developer portfolio website, built to showcase my **projects
 ## 🧾 License
 
 This project is free to use and modify. Attribution appreciated.
-Designed and built with ❤️ by **Pratham Jadeja**.
+Designed and built by **Pratham Jadeja**.
