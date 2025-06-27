@@ -23,10 +23,3 @@ This is my personal developer portfolio website, built to showcase my **projects
 * Formspree for contact form handling
 * Responsive layout using custom CSS
 * Favicon & metadata for SEO and branding
-
----
-
-## 🧾 License
-
-This project is free to use and modify. Attribution appreciated.
-Designed and built by **Pratham Jadeja**.
