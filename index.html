@@ -14,6 +14,10 @@
       rel="stylesheet"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <style>
       :root {
         --primary-color: #0f2027;
@@ -21,9 +25,16 @@
         --accent-color: #00c9ff;
         --text-color: #ffffff;
         --card-bg: rgba(255, 255, 255, 0.05);
+        --section-spacing: 4rem;
       }
-      body {
+
+      * {
         margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
         font-family: "Poppins", sans-serif;
         background: linear-gradient(
           to right,
@@ -31,11 +42,14 @@
           var(--secondary-color)
         );
         color: var(--text-color);
+        line-height: 1.6;
         overflow-x: hidden;
       }
+
+      /* Header */
       header {
         text-align: center;
-        padding: 4rem 2rem;
+        padding: 5rem 2rem;
         background: #0f2027;
         background-image: radial-gradient(
             rgba(0, 233, 255, 0.08) 1px,
@@ -45,59 +59,113 @@
         background-size: 40px 40px;
         animation: gridMove 20s linear infinite;
         backdrop-filter: blur(10px);
-      }
-
-      @media screen and (max-width: 768px) {
-        header {
-          position: relative;
-        } 
-        header::before {
-          content: "";
-          position: absolute;
-          inset: 0;
-          background: rgba(0, 0, 0, 0.6);
-          pointer-events: none;
-          z-index: -1;
-        }
+        position: relative;
       }
 
       header h1 {
-        font-size: 3rem;
+        font-size: 3.5rem;
         margin: 0;
+        line-height: 1.2;
       }
+
       header p {
-        margin: 0.5rem 0;
-        font-size: 1.2rem;
+        margin: 1rem 0;
+        font-size: 1.3rem;
+        opacity: 0.9;
       }
+
       header a {
         color: var(--accent-color);
         text-decoration: none;
+        transition: opacity 0.3s;
       }
+
+      header a:hover {
+        opacity: 0.8;
+      }
+
+      .header-links {
+        margin-top: 1.5rem;
+      }
+
+      .header-links a {
+        margin: 0 0.5rem;
+        font-size: 1.1rem;
+      }
+
+      /* Container & Sections */
       .container {
         max-width: 1000px;
-        margin: auto;
+        margin: 0 auto;
         padding: 2rem;
       }
+
       section {
-        margin-bottom: 3rem;
+        margin-bottom: var(--section-spacing);
       }
+
       h2 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
+        font-size: 2.2rem;
+        margin-bottom: 1.5rem;
         border-bottom: 2px solid var(--accent-color);
         display: inline-block;
       }
+
+      h2 i {
+        margin-right: 0.5rem;
+      }
+
+      /* Cards */
       .card {
         background: var(--card-bg);
-        padding: 1.5rem;
+        padding: 2rem;
         border-radius: 15px;
-        margin-bottom: 1.5rem;
+        margin-bottom: 2rem;
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
+
       .card:hover {
         transform: translateY(-5px);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
       }
+
+      .card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .card p {
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+        opacity: 0.9;
+      }
+
+      .project-img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 1.5rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .tech-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .tag {
+        display: inline-block;
+        background: var(--accent-color);
+        color: black;
+        padding: 0.3rem 0.8rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
+
+      /* Buttons */
       a.btn {
         display: inline-block;
         margin-top: 1rem;
@@ -107,18 +175,42 @@
         border-radius: 30px;
         font-weight: 600;
         text-decoration: none;
+        transition: transform 0.3s, opacity 0.3s;
       }
+
+      a.btn:hover {
+        transform: translateY(-2px);
+        opacity: 0.9;
+      }
+
+      /* Form */
+      form label {
+        display: block;
+        margin-top: 1.5rem;
+        font-weight: 500;
+      }
+
       form input,
       form textarea {
-        width: 95%;
+        width: 100%;
         padding: 0.75rem;
         margin-top: 0.5rem;
         border: none;
         border-radius: 10px;
         font-family: "Poppins", sans-serif;
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+        transition: background 0.3s;
       }
+
+      form input:focus,
+      form textarea:focus {
+        outline: none;
+        background: rgba(255, 255, 255, 0.2);
+      }
+
       form button {
-        margin-top: 1rem;
+        margin-top: 1.5rem;
         background: var(--accent-color);
         color: black;
         padding: 0.75rem 2rem;
@@ -126,13 +218,23 @@
         border-radius: 25px;
         font-weight: 600;
         cursor: pointer;
+        transition: transform 0.3s;
       }
+
+      form button:hover {
+        transform: translateY(-2px);
+      }
+
+      /* Footer */
       footer {
         text-align: center;
-        padding: 2rem;
+        padding: 2.5rem;
         background: rgba(0, 0, 0, 0.4);
         backdrop-filter: blur(8px);
+        margin-top: var(--section-spacing);
       }
+
+      /* Background Animation */
       .bg-animated {
         position: fixed;
         top: 0;
@@ -158,6 +260,37 @@
           background-position: 100px 100px, 50px 50px;
         }
       }
+
+      /* Mobile Optimization */
+      @media screen and (max-width: 768px) {
+        header {
+          padding: 3rem 1.5rem;
+        }
+
+        header h1 {
+          font-size: 2.5rem;
+        }
+
+        header p {
+          font-size: 1.1rem;
+        }
+
+        .container {
+          padding: 1.5rem;
+        }
+
+        section {
+          margin-bottom: 3rem;
+        }
+
+        h2 {
+          font-size: 1.8rem;
+        }
+
+        .card {
+          padding: 1.5rem;
+        }
+      }
     </style>
   </head>
   <body>
@@ -168,22 +301,25 @@
       <p>
         <a href="mailto:jadejapratham08@gmail.com">jadejapratham08@gmail.com</a>
       </p>
-      <p>
+      <div class="header-links">
         <a
           href="https://www.linkedin.com/in/jadeja-pratham-6b968a32b"
           target="_blank"
-          >LinkedIn</a
+          ><i class="fab fa-linkedin"></i> LinkedIn</a
         >
-        | <a href="https://github.com/jadejapratham" target="_blank">GitHub</a>
-      </p>
+        |
+        <a href="https://github.com/jadejapratham" target="_blank"
+          ><i class="fab fa-github"></i> GitHub</a
+        >
+      </div>
     </header>
 
     <div class="container">
       <section data-aos="fade-up">
-        <h2>✨ Profile Summary</h2>
+        <h2><i class="fas fa-user"></i> Profile Summary</h2>
         <div class="card">
           <p>
-            Self-driven B.Tech CSE student with Hands-on experience building
+            Self-driven B.Tech CSE student with hands-on experience building
             AI-powered tools and dashboards. Proficient in Python, machine
             learning, Streamlit, and web development. Focused on creating
             intuitive user experiences and intelligent systems.
@@ -192,7 +328,7 @@
       </section>
 
       <section data-aos="fade-up">
-        <h2>🔧 Skills</h2>
+        <h2><i class="fas fa-code"></i> Skills</h2>
         <div class="card">
           <p><strong>Languages:</strong> Python, JavaScript, HTML, CSS</p>
           <p>
@@ -208,54 +344,80 @@
       </section>
 
       <section data-aos="fade-up">
-        <h2>📊 Projects</h2>
+        <h2><i class="fas fa-project-diagram"></i> Projects</h2>
 
         <div class="card">
-          <h3>Crypto Trend Analyzer & Price Predictor</h3>
+          <h3>🚀 Crypto Trend Analyzer & Price Predictor</h3>
+          <img
+            src="/assets/images/crypto_image.png"
+            class="project-img"
+            alt="Crypto Predictor Preview"
+          />
           <p>
             Built a crypto prediction dashboard using LSTM and real-time
-            sentiment analysis via NewsAPI and CoinGecko. Deployed using
-            Streamlit.
+            sentiment analysis via NewsAPI and CoinGecko.
           </p>
-          <a
-            href="https://github.com/jadejapratham/crypto_predictor"
-            class="btn"
-            target="_blank"
-            >View Project</a
-          >
+          <div class="tech-tags">
+            <span class="tag">Python</span>
+            <span class="tag">LSTM</span>
+            <span class="tag">Streamlit</span>
+            <span class="tag">NewsAPI</span>
+          </div>
+          <a href="https://cryptopredictor-jadejapratham.streamlit.app/" class="btn" target="_blank">
+            <i class="fas fa-external-link-alt"></i> Live Demo
+          </a>
         </div>
 
         <div class="card">
-          <h3>AI Image Generation with Stable Diffusion</h3>
+          <h3>🎨 AI Image Generation with Stable Diffusion</h3>
+          <img
+            src="assets/images/Gen_AI_image.png"
+            class="project-img"
+            alt="AI Image Generator Preview"
+          />
           <p>
             Offline image generator using Stable Diffusion and ComfyUI,
             supporting custom prompts and optimized rendering.
           </p>
+          <div class="tech-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Stable Diffusion</span>
+            <span class="tag">ComfyUI</span>
+          </div>
           <a
             href="https://github.com/jadejapratham/Image-Generation-using-Stable-Diffusion-Comfy-UI-by-Jadeja-Pratham"
             class="btn"
             target="_blank"
-            >View Project</a
           >
+            <i class="fab fa-github"></i>
+            View Project
+          </a>
         </div>
 
         <div class="card">
-          <h3>Health Tracking Website</h3>
+          <h3>📊 Health Tracking Website</h3>
+          <img
+            src="assets/images/Health_trac_image.png"
+            class="project-img"
+            alt="Health Tracker Website Preview"
+          />
           <p>
-            Responsive fitness and nutrition dashboard using HTML, CSS, and
-            JavaScript for tracking goals and progress.
+            Designed and developed a responsive health tracking website with
+            personalized features for monitoring fitness goals and diet plans.
           </p>
-          <a
-            href="https://github.com/jadejapratham/health-tracker-website"
-            class="btn"
-            target="_blank"
-            >View Project</a
-          >
+          <div class="tech-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+          <a href="https://jadejapratham.github.io/health-tracker-website/" class="btn" target="_blank">
+            <i class="fas fa-external-link-alt"></i> Live Demo
+          </a>
         </div>
       </section>
 
       <section data-aos="fade-up">
-        <h2>🎓 Education</h2>
+        <h2><i class="fas fa-graduation-cap"></i> Education</h2>
         <div class="card">
           <p>
             <strong>ITM (SLS) Baroda University</strong> – B.Tech in Computer
@@ -268,7 +430,7 @@
       </section>
 
       <section data-aos="fade-up">
-        <h2>🏆 Certifications</h2>
+        <h2><i class="fas fa-certificate"></i> Certifications</h2>
         <div class="card">
           <ul>
             <li>Certificate in Generative AI - Simplilearn</li>
@@ -281,7 +443,7 @@
       </section>
 
       <section data-aos="fade-up">
-        <h2>📧 Contact Me</h2>
+        <h2><i class="fas fa-envelope"></i> Contact Me</h2>
         <div class="card">
           <form action="https://formspree.io/f/xblyrlev" method="POST">
             <label for="name">Name</label>
@@ -290,7 +452,9 @@
             <input type="email" id="email" name="email" required />
             <label for="message">Message</label>
             <textarea id="message" name="message" rows="4" required></textarea>
-            <button type="submit">Send Message</button>
+            <button type="submit">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
           </form>
         </div>
       </section>
@@ -303,7 +467,9 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      AOS.init();
+      AOS.init({
+        duration: 800,
+      });
     </script>
   </body>
 </html>
