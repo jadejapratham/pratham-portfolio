@@ -74,47 +74,35 @@
       }
 
       header a {
+        font-size: 1rem;
+        padding: 5px;
         color: var(--accent-color);
         text-decoration: none;
-        transition: opacity 0.3s;
       }
 
       header a:hover {
-        opacity: 0.8;
+        color: white;
       }
 
       .header-links {
-        margin-top: 1.5rem;
+        margin-top: 1rem;
       }
 
       .header-links a {
-        margin: 0 0.5rem;
-        font-size: 1.1rem;
-      }
-
-      .resume-button {
         display: inline-flex;
         align-items: center;
         gap: 10px;
-        padding: 12px 24px;
-        background: linear-gradient(to right, #4facfe, #00f2fe);
-        color: white;
-        font-size: 1rem;
+        padding: 5px;
+        color: var(--accent-color);
+        font-size: 1.1rem;
         font-weight: 600;
         text-decoration: none;
-        border-radius: 12px;
-        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        transition: transform 0.2s ease;
       }
-      
-      .resume-button i {
-        font-size: 1.2rem;
-      }
-      
-      .resume-button:hover {
+
+      .header-links a:hover {
         transform: translateY(-3px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        background: linear-gradient(to right, #00f2fe, #4facfe);
+        color: white;
       }
 
       .container {
@@ -129,6 +117,7 @@
 
       h2 {
         font-size: 2.2rem;
+        color: var(--accent-color);
         margin-bottom: 1.5rem;
         border-bottom: 2px solid var(--accent-color);
         display: inline-block;
@@ -155,12 +144,17 @@
       .card h3 {
         font-size: 1.5rem;
         margin-bottom: 1rem;
+        color: beige;
       }
 
       .card p {
         margin-bottom: 1.5rem;
         font-size: 1.1rem;
         opacity: 0.9;
+      }
+
+      .card p strong {
+        color:beige;
       }
 
       .project-img {
@@ -200,7 +194,7 @@
       }
 
       a.btn:hover {
-        transform: translateY(-2px);
+        transform: translateY(-4px);
         opacity: 0.9;
       }
       form label {
@@ -241,7 +235,7 @@
       }
 
       form button:hover {
-        transform: translateY(-2px);
+        transform: translateY(-4px);
       }
       footer {
         text-align: center;
@@ -312,9 +306,11 @@
     <header data-aos="fade-down">
       <h1>Pratham Jadeja</h1>
       <p>Python Programmer | Frontend Developer</p>
-      <p>
-        <a href="mailto:jadejapratham08@gmail.com">jadejapratham08@gmail.com</a>
-      </p>
+      <a href="mailto:jadejapratham08@gmail.com">
+        <i class="fa-solid fa-envelope"></i>
+        jadejapratham08@gmail.com
+      </a>
+
       <div class="header-links">
         <a
           href="https://www.linkedin.com/in/jadeja-pratham-6b968a32b"
@@ -326,9 +322,11 @@
           ><i class="fab fa-github"></i> GitHub</a
         >
         |
-        <a href="assets/JADEJA_PRATHAM_RESUME.pdf" download class="resume-button"
-          ><i class="fas fa-file-arrow-down"></i>
-          <span>Download Resume</span></a
+        <a
+          href="assets/JADEJA_PRATHAM_RESUME.pdf"
+          download
+          class="resume-button"
+          ><i class="fas fa-file-arrow-down"></i> <span>Updated Resume</span></a
         >
       </div>
     </header>
@@ -338,10 +336,17 @@
         <h2><i class="fas fa-user"></i> Profile Summary</h2>
         <div class="card">
           <p>
-            Self-driven B.Tech CSE student with hands-on experience building
-            AI-powered tools and dashboards. Proficient in Python, machine
-            learning, Streamlit, and web development. Focused on creating
-            intuitive user experiences and intelligent systems.
+            I’m a final-year B.Tech CSE student who genuinely enjoys building
+            things with code — whether it's a clean, responsive website or an
+            AI-powered tool that solves a real problem. Over the past year, I’ve
+            explored different areas of tech through projects I really enjoyed
+            working on — like a crypto prediction app using Streamlit, an image
+            generator built with Stable Diffusion and ComfyUI, and a
+            personalized health tracking website using just HTML, CSS, and
+            JavaScript. I’m always excited to learn new skills, take on new
+            challenges, and create something useful. For me, it’s not just about
+            writing code — it’s about building experiences that actually help
+            people.
           </p>
         </div>
       </section>
@@ -382,7 +387,11 @@
             <span class="tag">Streamlit</span>
             <span class="tag">NewsAPI</span>
           </div>
-          <a href="https://cryptopredictor-jadejapratham.streamlit.app/" class="btn" target="_blank">
+          <a
+            href="https://cryptopredictor-jadejapratham.streamlit.app/"
+            class="btn"
+            target="_blank"
+          >
             <i class="fas fa-external-link-alt"></i> Live Demo
           </a>
         </div>
@@ -429,7 +438,11 @@
             <span class="tag">CSS</span>
             <span class="tag">JavaScript</span>
           </div>
-          <a href="https://jadejapratham.github.io/health-tracker-website/" class="btn" target="_blank">
+          <a
+            href="https://jadejapratham.github.io/health-tracker-website/"
+            class="btn"
+            target="_blank"
+          >
             <i class="fas fa-external-link-alt"></i> Live Demo
           </a>
         </div>
@@ -452,11 +465,12 @@
         <h2><i class="fas fa-certificate"></i> Certifications</h2>
         <div class="card">
           <ul>
-            <li>Certificate in Generative AI - Simplilearn</li>
-            <li>Big Data Analytics - Great Learning</li>
-            <li>AI/ML Basics - Analytics Vidhya</li>
-            <li>Blockchain Basics - Great Learning</li>
-            <li>AI: Transformative Learning Internship - TechSaksham</li>
+            <li><strong>AI : Transformative Learning Internship</strong> - TechSaksham</li>
+            <li><strong>Generative AI</strong> - Simplilearn</li>
+            <li><strong>AI/ML Basics</strong> - Analytics Vidhya</li>
+            <li><strong>Machine Learning using Python</strong> - Simplilearn</li>
+            <li><strong>Big Data Analytics</strong> - Great Learning</li>
+            <li><strong>Blockchain Basics</strong> - Great Learning</li>
           </ul>
         </div>
       </section>
