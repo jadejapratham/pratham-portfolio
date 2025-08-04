@@ -153,14 +153,6 @@
         opacity: 0.9;
       }
 
-      .card p strong {
-        color: beige;
-      }
-
-      .card ul strong {
-        color: beige;
-      }
-
       .project-img {
         width: 100%;
         border-radius: 10px;
@@ -278,6 +270,10 @@
         transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
 
+      .cert-card strong {
+        color: beige;
+      }
+
       .cert-card i {
         color: var(--accent-color);
         font-size: 1.5rem;
@@ -288,6 +284,40 @@
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
       }
 
+      .education-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+
+      .edu-card {
+        background: var(--card-bg);
+        backdrop-filter: blur(10px);
+        padding: 1rem;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-size: 1rem;
+        font-weight: 500;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: transform 0.2s ease, box-shadow 0.3s ease;
+      }
+
+      .edu-card strong {
+        color: beige;
+      }
+
+      .edu-card i {
+        font-size: 1.5rem;
+        color: var(--accent-color);
+      }
+
+      .edu-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      }
 
       form label {
         display: block;
@@ -612,32 +642,36 @@
       <section data-aos="fade-up">
         <h2><i class="fas fa-certificate"></i> Certifications</h2>
         <div class="cert-grid">
-          <div class="cert-card"><i class="fas fa-award"></i> AI: Transformative Learning - TechSaksham (Microsoft)</div>
-          <div class="cert-card"><i class="fas fa-award"></i> GenAI Powered Data Analytics - Forage (TATA)</div>
-          <div class="cert-card"><i class="fas fa-award"></i> Machine Learning using Python - Simplilearn</div>
-          <div class="cert-card"><i class="fas fa-award"></i> Data Analyst 101 - Simplilearn (Microsoft)</div>
-          <div class="cert-card"><i class="fas fa-award"></i> AI/ML Basics - Analytics Vidhya</div>
-          <div class="cert-card"><i class="fas fa-award"></i> Big Data Analytics - Great Learning</div>
-          <div class="cert-card"><i class="fas fa-award"></i> Introduction to Data Science - Simplilearn</div>
-          <div class="cert-card"><i class="fas fa-award"></i> Generative AI - Simplilearn</div>
+          <div class="cert-card"><i class="fas fa-award"></i> <p><strong>AI: Transformative Learning</strong> - TechSaksham (Microsoft)</p></div>
+          <div class="cert-card"><i class="fas fa-award"></i> <p><strong>GenAI Powered Data Analytics</strong> - Forage (TATA)</p></div>
+          <div class="cert-card"><i class="fas fa-award"></i> <p><strong>Machine Learning using Python</strong> - Simplilearn</p></div>
+          <div class="cert-card"><i class="fas fa-award"></i> <p><strong>Data Analyst 101</strong> - Simplilearn (Microsoft)</p></div>
+          <div class="cert-card"><i class="fas fa-award"></i> <p><strong>AI/ML Basics</strong> - Analytics Vidhya</p></div>
+          <div class="cert-card"><i class="fas fa-award"></i> <p><strong>Big Data Analytics</strong> - Great Learning</p></div>
+          <div class="cert-card"><i class="fas fa-award"></i> <p><strong>Introduction to Data Science</strong> - Simplilearn</p></div>
+          <div class="cert-card"><i class="fas fa-award"></i> <p><strong>Generative AI</strong> - Simplilearn</p></div>
         </div>
       </section>
 
-
       <section data-aos="fade-up">
         <h2><i class="fas fa-graduation-cap"></i> Education</h2>
-        <div class="card">
-          <p>
-            <strong>B.Tech in Computer Science & Engineering</strong> – ITM
-            (SLS) Baroda University (Vadodara, Gujarat)
-          </p>
-          <p>
-            <strong
-              >H.S.C : Science (Group A - Physics, Chemistry,
-              Mathametics)</strong
-            >
-            – Shree Navdurga High School
-          </p>
+        <div class="education-grid">
+          <div class="edu-card">
+            <i class="fas fa-university"></i>
+            <div>
+              <strong>B.Tech in Computer Science & Engineering</strong><br>
+              ITM (SLS) Baroda University | Vadodara, Gujarat<br>
+              <small>09/2021 – Present</small>
+            </div>
+          </div>
+          <div class="edu-card">
+            <i class="fas fa-school"></i>
+            <div>
+              <strong>H.S.C - Science (Group A)</strong><br>
+              Shree Navdurga High School | Rajpipla, Gujarat<br>
+              <small>Year of Passing: 2021</small>
+            </div>
+          </div>
         </div>
       </section>
 
