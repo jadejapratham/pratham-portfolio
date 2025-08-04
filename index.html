@@ -154,11 +154,11 @@
       }
 
       .card p strong {
-        color:beige;
+        color: beige;
       }
 
       .card ul strong {
-        color:beige;
+        color: beige;
       }
 
       .project-img {
@@ -201,6 +201,94 @@
         transform: translateY(-4px);
         opacity: 0.9;
       }
+
+      .skills-icon-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+
+      .skill-icon-card {
+        background: var(--card-bg);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 1rem;
+        border-radius: 12px;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--text-color);
+        transition: transform 0.2s ease, box-shadow 0.3s ease;
+      }
+
+      .skill-icon-card i {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+        display: block;
+      }
+
+      .skill-icon-card i.fa-python { color: #3776AB; }
+      .skill-icon-card i.fa-js-square { color: #F7DF1E; }
+      .skill-icon-card i.fa-html5 { color: #E34F26; }
+      .skill-icon-card i.fa-css3-alt { color: #1572B6; }
+      .skill-icon-card i.fa-react { color: #61DAFB; }
+      .skill-icon-card i.fa-git-alt { color: #F05032; }
+      .skill-icon-card i.fa-figma { color: #F24E1E; }
+      .skill-icon-card i.fa-stream { color: #00c9ff; }
+      .skill-icon-card i.fa-flask { color: #00c9ff; }
+      .skill-icon-card i.fa-database { color: #00c9ff; }
+      .skill-icon-card i.fa-brain { color: #00c9ff; }
+      .skill-icon-card i.fa-chart-bar { color: #00c9ff; }
+      .skill-icon-card i.fa-wordpress-simple { color: #21759B; }
+      .skill-icon-card i.fa-table { color: #00c9ff; }
+      .skill-icon-card i.fa-square-root-alt { color: #00c9ff; }
+      .skill-icon-card i.fa-robot { color: #FF6F00; }
+      .skill-icon-card i.fa-chart-line { color: #00c9ff; }
+      .skill-icon-card i.fa-wave-square { color: #00c9ff; }
+      .skill-icon-card i.fa-clock { color: #00c9ff; }
+      .skill-icon-card i.fa-language { color: #00c9ff; }
+      .skill-icon-card i.fa-chart-pie { color: #00c9ff; }
+
+
+      .skill-icon-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      .cert-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+
+      .cert-card {
+        background: var(--card-bg);
+        backdrop-filter: blur(10px);
+        padding: 1rem 1.5rem;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 600;
+        font-size: 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .cert-card i {
+        color: var(--accent-color);
+        font-size: 1.5rem;
+      }
+
+      .cert-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      }
+
+
       form label {
         display: block;
         margin-top: 1.5rem;
@@ -356,16 +444,52 @@
       </section>
 
       <section data-aos="fade-up">
-        <h2><i class="fas fa-code"></i> Skills</h2>
+        <h2><i class="fas fa-briefcase"></i> Experience</h2>
+
         <div class="card">
-          <p><strong>Languages:</strong> Python, JavaScript, HTML, CSS</p>
-          <p>
-            <strong>Frameworks:</strong> Streamlit, Flask, Pandas, NumPy, TensorFlow, React.js, Matplotlib, Seaborn
-          </p>
-          <p><strong>Tools:</strong> Git, Figma, WordPress, API Integration</p>
-          <p>
-            <strong>Concepts:</strong> AI/ML Basics, Data Analysis & Visualization, Time Series Forecasting, NLP
-          </p>
+          <h3>🧠 GenAI Powered Data Analytics — Tata iQ | Forage</h3>
+
+          <ul>
+            <li>
+              Completed a job simulation involving AI-powered data analytics and
+              strategy development for the Financial Services team.
+            </li>
+            <li>
+              Conducted Exploratory Data Analysis (EDA) using GenAI tools to
+              assess data quality and structure predictive modeling insights.
+            </li>
+            <li>
+              Proposed a no-code predictive framework for delinquency risk,
+              integrating ethical AI practices.
+            </li>
+            <li>
+              Designed AI-driven collection strategies leveraging agentic AI &
+              automation workflows.
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>
+            🎨 AI: Transformative Learning Intern — Microsoft | TechSaksham
+          </h3>
+
+          <ul>
+            <li>
+              Built a local, offline image generation pipeline using Stable Diffusion, integrated 
+              with ComfyUI. Configured and enhanced the workflow for efficient image 
+              rendering with customizable prompts. Focused on user-friendly interface 
+              design, and optimized performance for high-quality output.
+            </li>
+            <li>
+              Prepared project documentation and assisted in literature reviews
+              to support senior staff presentations.
+            </li>
+            <li>
+              Participated in workshops, applying learned AI concepts to
+              real-world projects.
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -380,9 +504,11 @@
             alt="Crypto Predictor Preview"
           />
           <p>
-            Developed a web-based application using Streamlit to predict cryptocurrency price trends.
-            Implemented data visualization, sentiment analysis from crypto news sources, and predictive modeling 
-            to help users understand potential market movements. Focused on delivering an intuitive UI with real-time data updates.
+            Developed a web-based application using Streamlit to predict
+            cryptocurrency price trends. Implemented data visualization,
+            sentiment analysis from crypto news sources, and predictive modeling
+            to help users understand potential market movements. Focused on
+            delivering an intuitive UI with real-time data updates.
           </p>
           <div class="tech-tags">
             <span class="tag">Python</span>
@@ -407,9 +533,11 @@
             alt="AI Image Generator Preview"
           />
           <p>
-            Built a local, offline image generation pipeline using Stable Diffusion integrated with ComfyUI.
-            Configured and enhanced the workflow for efficient image rendering with customizable prompts.
-            Focused on user-friendly interface design and optimized performance for high-quality output.
+            Built a local, offline image generation pipeline using Stable
+            Diffusion integrated with ComfyUI. Configured and enhanced the
+            workflow for efficient image rendering with customizable prompts.
+            Focused on user-friendly interface design and optimized performance
+            for high-quality output.
           </p>
           <div class="tech-tags">
             <span class="tag">Python</span>
@@ -434,8 +562,10 @@
             alt="Health Tracker Website Preview"
           />
           <p>
-            Designed and developed a responsive health tracking website with personalized features for monitoring fitness goals and diet plans.
-            Created engaging front-end interfaces, and implemented intuitive user interactions for tracking daily progress.
+            Designed and developed a responsive health tracking website with
+            personalized features for monitoring fitness goals and diet plans.
+            Created engaging front-end interfaces, and implemented intuitive
+            user interactions for tracking daily progress.
           </p>
           <div class="tech-tags">
             <span class="tag">HTML</span>
@@ -453,29 +583,61 @@
       </section>
 
       <section data-aos="fade-up">
-        <h2><i class="fas fa-graduation-cap"></i> Education</h2>
-        <div class="card">
-          <p>
-            <strong>B.Tech in Computer Science & Engineering</strong> – ITM (SLS) Baroda University (Vadodara, Gujarat)
-          </p>
-          <p>
-            <strong>H.S.C : Science (Group A - Physics, Chemistry, Mathametics)</strong> – Shree Navdurga High School
-          </p>
+        <h2><i class="fas fa-code"></i> Skills</h2>
+        <div class="skills-icon-grid">
+          <div class="skill-icon-card"><i class="fab fa-python"></i> Python</div>
+          <div class="skill-icon-card"><i class="fab fa-js-square"></i> JavaScript</div>
+          <div class="skill-icon-card"><i class="fab fa-html5"></i> HTML</div>
+          <div class="skill-icon-card"><i class="fab fa-css3-alt"></i> CSS</div>
+          <div class="skill-icon-card"><i class="fas fa-stream"></i> Streamlit</div>
+          <div class="skill-icon-card"><i class="fas fa-flask"></i> Flask</div>
+          <div class="skill-icon-card"><i class="fas fa-database"></i> API Integration</div>
+          <div class="skill-icon-card"><i class="fab fa-react"></i> React.js</div>
+          <div class="skill-icon-card"><i class="fas fa-brain"></i> AI/ML Basics</div>
+          <div class="skill-icon-card"><i class="fas fa-chart-bar"></i> Data Visualization</div>
+          <div class="skill-icon-card"><i class="fab fa-git-alt"></i> Git</div>
+          <div class="skill-icon-card"><i class="fab fa-figma"></i> Figma</div>
+          <div class="skill-icon-card"><i class="fas fa-table"></i> Pandas</div>
+          <div class="skill-icon-card"><i class="fas fa-square-root-alt"></i> NumPy</div>
+          <div class="skill-icon-card"><i class="fas fa-robot"></i> TensorFlow</div>
+          <div class="skill-icon-card"><i class="fas fa-chart-line"></i> Matplotlib</div>
+          <div class="skill-icon-card"><i class="fas fa-wave-square"></i> Seaborn</div>
+          <div class="skill-icon-card"><i class="fab fa-wordpress-simple"></i> WordPress</div>
+          <div class="skill-icon-card"><i class="fas fa-clock"></i> Time Series Forecasting</div>
+          <div class="skill-icon-card"><i class="fas fa-language"></i> NLP</div>
+          <div class="skill-icon-card"><i class="fas fa-chart-pie"></i> Data Analysis</div>
         </div>
       </section>
 
       <section data-aos="fade-up">
         <h2><i class="fas fa-certificate"></i> Certifications</h2>
+        <div class="cert-grid">
+          <div class="cert-card"><i class="fas fa-award"></i> AI: Transformative Learning - TechSaksham (Microsoft)</div>
+          <div class="cert-card"><i class="fas fa-award"></i> GenAI Powered Data Analytics - Forage (TATA)</div>
+          <div class="cert-card"><i class="fas fa-award"></i> Machine Learning using Python - Simplilearn</div>
+          <div class="cert-card"><i class="fas fa-award"></i> Data Analyst 101 - Simplilearn (Microsoft)</div>
+          <div class="cert-card"><i class="fas fa-award"></i> AI/ML Basics - Analytics Vidhya</div>
+          <div class="cert-card"><i class="fas fa-award"></i> Big Data Analytics - Great Learning</div>
+          <div class="cert-card"><i class="fas fa-award"></i> Introduction to Data Science - Simplilearn</div>
+          <div class="cert-card"><i class="fas fa-award"></i> Generative AI - Simplilearn</div>
+        </div>
+      </section>
+
+
+      <section data-aos="fade-up">
+        <h2><i class="fas fa-graduation-cap"></i> Education</h2>
         <div class="card">
-          <ul>
-            <li><strong>AI : Transformative Learning Internship</strong> - TechSaksham</li>
-            <li><strong>Machine Learning using Python</strong> - Simplilearn</li>
-            <li><strong>Generative AI</strong> - Simplilearn</li>
-            <li><strong>Data Analyst</strong> - Simplilearn(Microsoft)</li>
-            <li><strong>AI/ML Basics</strong> - Analytics Vidhya</li>
-            <li><strong>Introduction to Data Science</strong> - Simplilearn</li>
-            <li><strong>Big Data Analytics</strong> - Great Learning</li>
-          </ul>
+          <p>
+            <strong>B.Tech in Computer Science & Engineering</strong> – ITM
+            (SLS) Baroda University (Vadodara, Gujarat)
+          </p>
+          <p>
+            <strong
+              >H.S.C : Science (Group A - Physics, Chemistry,
+              Mathametics)</strong
+            >
+            – Shree Navdurga High School
+          </p>
         </div>
       </section>
 
